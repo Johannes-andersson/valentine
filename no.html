@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Got You!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0; /* Add a background color for better visibility */
+        }
+
+        h1 {
+            z-index: 1; /* Ensure the h1 is above the smile faces */
+            color: red; /* Set the color of the h1 */
+            animation: heartbeat 2s infinite; /* Apply the heartbeat animation */
+        }
+
+        .smile-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .smile {
+            font-size: 24px;
+            position: absolute;
+            animation: fall 2s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Heheh got ye the no button was just for show</h1>
+    <div class="smile-container">
+        <!-- Use emoji characters directly in the HTML -->
+        <div class="smile">😄</div>
+        <div class="smile">😃</div>
+        <!-- Add more smile faces as needed -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
